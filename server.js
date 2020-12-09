@@ -3,6 +3,8 @@ const app = express();
 
 const hbs = require("hbs");
 
+require('./hbs/helpers');
+
 //Here is using a middlewere that always is executed
 //In this case calls the index.html in the public folder
 app.use(express.static(__dirname + "/public"));
@@ -16,18 +18,12 @@ app.set("view engine", "hbs");
 
 app.get("/", function (req, res) {
     //The second param permits send data to the page.
-    res.render("home", {
-        name: "Raul Rodriguez",
-        year: new Date().getFullYear()
-    });
+    res.render("home");
 });
 
 app.get("/about", function (req, res) {
     //The second param permits send data to the page.
-    res.render("about", {
-        name: "Raul Rodriguez",
-        year: new Date().getFullYear()
-    });
+    res.render("about");
 });
 
 /* app.get("/data", function (req, res) {
