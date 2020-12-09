@@ -15,8 +15,16 @@ hbs.registerPartials(__dirname + "/views/partials", (err) => {
 app.set("view engine", "hbs");
 
 app.get("/", function (req, res) {
-    //The second param permite sen data to the page.
-    res.render("index", {
+    //The second param permits send data to the page.
+    res.render("home", {
+        name: "Raul Rodriguez",
+        year: new Date().getFullYear()
+    });
+});
+
+app.get("/about", function (req, res) {
+    //The second param permits send data to the page.
+    res.render("about", {
         name: "Raul Rodriguez",
         year: new Date().getFullYear()
     });
