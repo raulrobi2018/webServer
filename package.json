@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/raulrobi2018/webServer/issues"
   },
-  "homepage": "https://github.com/raulrobi2018/webServer#readme"
+  "homepage": "https://github.com/raulrobi2018/webServer#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
