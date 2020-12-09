@@ -5,14 +5,16 @@ const app = express();
 //In this case calls the index.html in the public folder
 app.use(express.static(__dirname + "/public"));
 
-/* app.get("/", function (req, res) {
-    let data = {
-        name: "Raul",
-        age: 42,
-        url: req.url
-    };
-    res.send(data);
-}); */
+// Express with hbs
+app.set("view engine", "hbs");
+
+app.get("/", function (req, res) {
+    //The second param permite sen data to the page.
+    res.render("home", {
+        name: "Raul Rodriguez",
+        year: new Date().getFullYear()
+    });
+});
 
 /* app.get("/data", function (req, res) {
     res.send("Hello data");
