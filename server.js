@@ -3,7 +3,10 @@ const app = express();
 
 const hbs = require("hbs");
 
-require('./hbs/helpers');
+//Gets the port. If we publish the app in Heroku for example, the port is necessary
+const port = process.env.PORT || 3000;
+
+require("./hbs/helpers");
 
 //Here is using a middlewere that always is executed
 //In this case calls the index.html in the public folder
@@ -31,5 +34,5 @@ app.get("/about", function (req, res) {
 }); */
 
 app.listen(3000, () => {
-    console.log("Listening port 3000");
+    console.log(`Listening port ${port}`);
 });
