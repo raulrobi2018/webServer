@@ -5,7 +5,7 @@ require("dotenv").config();
 const hbs = require("hbs");
 
 //Gets the port. If we publish the app in Heroku for example, the port is necessary
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 
 require("./hbs/helpers");
 
