@@ -1,9 +1,8 @@
-const express = require("express");
-const app = express();
 require("dotenv").config();
-
+const express = require("express");
 const hbs = require("hbs");
 
+const app = express();
 //Gets the port. If we publish the app in Heroku for example, the port is necessary
 const port = process.env.PORT || 3000;
 
